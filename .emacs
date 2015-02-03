@@ -40,6 +40,9 @@
 (global-set-key (kbd "C-c M-l") 'windmove-right)
 (global-set-key (kbd "C-c M-k") 'windmove-up)
 (global-set-key (kbd "C-c M-j") 'windmove-down)
+(require 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(setq ibuffer-default-sorting-mode 'major-mode)
 
 ;; Colors for code
 (custom-set-faces
