@@ -7,6 +7,7 @@
 (require 'cl)
 (require 'site-gentoo nil t)
 (package-initialize)
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'load-path "~/dj/etc/")
 (require 'dj)
 

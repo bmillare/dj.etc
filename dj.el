@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/elpa")
+(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 (require 'clojure-mode)
 (add-hook 'clojure-mode-hook (lambda ()
 			       (paredit-mode +1)
