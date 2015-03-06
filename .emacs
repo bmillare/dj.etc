@@ -13,7 +13,7 @@
 
 ;; Interface Color Scheme
 (when window-system
-  (add-to-list 'default-frame-alist '(background-color . "gray25"))
+  (add-to-list 'default-frame-alist '(background-color . "gray0"))
   (add-to-list 'default-frame-alist '(foreground-color . "gray85"))
   (add-to-list 'default-frame-alist '(cursor-color . "red3"))
   (add-to-list 'default-frame-alist '(mouse-color . "white")))
