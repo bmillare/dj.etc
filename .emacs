@@ -10,6 +10,12 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'load-path "~/dj/etc/")
 (require 'dj)
+(require 'helm)
+(require 'helm-config)
+(setq helm-split-window-in-side-p t)
+;;(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(helm-mode 1)
 
 ;; Interface Color Scheme
 (when window-system
@@ -25,13 +31,10 @@
 (set-scroll-bar-mode 'right)
 (setq x-select-enable-clipboard t)
 (column-number-mode 1)
-;;(tool-bar-mode 0)
-;;(menu-bar-mode 0)
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (setq inhibit-startup-screen t) 
 (setq default-truncate-lines t)                         ;;Do not word wrap, act like nano -w
-(ido-mode t)                                            ;;Auto completion for buffer/file searches
 (define-key global-map (kbd "RET") 'newline-and-indent) ;;After newline, auto indent
 (setq c-basic-offset 4)                                 ;;Spacing for indentation
 (setq transient-mark-mode t)                            ;;Color selected regions
@@ -42,9 +45,10 @@
 (global-set-key (kbd "C-c l") 'windmove-right)
 (global-set-key (kbd "C-c k") 'windmove-up)
 (global-set-key (kbd "C-c j") 'windmove-down)
-(require 'ibuffer)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-(setq ibuffer-default-sorting-mode 'major-mode)
+;; trying out helm, disabling
+; (require 'ibuffer)
+; (global-set-key (kbd "C-x C-b") 'ibuffer)
+; (setq ibuffer-default-sorting-mode 'major-mode)
 
 ;; Colors for code
 (custom-set-faces
