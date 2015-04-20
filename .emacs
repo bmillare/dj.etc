@@ -13,8 +13,10 @@
 (require 'helm)
 (require 'helm-config)
 (setq helm-split-window-in-side-p t)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-mini)
+;; better than defaults
+(global-set-key (kbd "M-x") 'helm-M-x)            ; has hotkeys next to the side
+(global-set-key (kbd "C-x b") 'helm-mini)         ; has recent files
+(global-set-key (kbd "C-x C-f") 'helm-find-files) ; has binding to helm-find
 (helm-mode 1)
 
 ;; Interface Color Scheme
@@ -39,8 +41,9 @@
 (setq c-basic-offset 4)                                 ;;Spacing for indentation
 (setq transient-mark-mode t)                            ;;Color selected regions
 (setq mark-even-if-inactive t)                          ;;tradi style but still use color
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward)
+;; trying out helm, disabling
+;(require 'uniquify)
+;(setq uniquify-buffer-name-style 'post-forward)
 (global-set-key (kbd "C-c h") 'windmove-left)
 (global-set-key (kbd "C-c l") 'windmove-right)
 (global-set-key (kbd "C-c k") 'windmove-up)
