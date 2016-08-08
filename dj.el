@@ -8,10 +8,4 @@
 (require 'paredit)
 (define-key paredit-mode-map (kbd "C-M-a") 'backward-up-list)
 (define-key paredit-mode-map (kbd "C-M-e") 'up-list)
-(require 'ac-cider)
-(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
-(add-hook 'cider-mode-hook 'ac-cider-setup)
-(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-mode))
 (provide 'dj)
