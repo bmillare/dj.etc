@@ -6,6 +6,8 @@
 ;; Load common defaults
 (require 'cl)
 (require 'site-gentoo nil t)
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'load-path "~/dj/etc/")
@@ -82,4 +84,5 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (undo-tree paredit helm-projectile helm-ag ac-cider))))
+    (helm helm-cider undo-tree lentic helm-projectile helm-ag ac-cider)))
+ '(safe-local-variable-values (quote ((lentic-init . lentic-clojure-org-init)))))
