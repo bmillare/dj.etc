@@ -91,6 +91,7 @@
       (process-send-string bmillare-target-buffer "\n"))))
 (global-set-key (kbd "C-c d") 'bmillare-send-defun)
 (global-set-key (kbd "C-c e") 'bmillare-send-line)
+(global-set-key (kbd "C-c r") 'bmillare-send-region)
 
 ;; Colors for code                                                                                                                                                                                                                                                              
 (custom-set-faces
