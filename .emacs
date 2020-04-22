@@ -77,7 +77,8 @@
           (case-fold-search t)
           (ignore (beginning-of-defun))
           (beg (point)))
-      (process-send-region bmillare-target-buffer beg end))))
+      (process-send-region bmillare-target-buffer beg end)
+      (process-send-string bmillare-target-buffer "\n"))))
 
 (defun bmillare-send-line ()
   (interactive)
